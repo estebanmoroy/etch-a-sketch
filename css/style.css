@@ -1,0 +1,21 @@
+:root {
+  --squares-per-side: 16;
+}
+
+.sketch-pad-container {
+  height: 720px;
+  width: 720px;
+  border: 5px solid black;
+}
+
+.sketch-pad {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--squares-per-side), 1fr);
+  grid-template-rows: repeat(var(--squares-per-side), 1fr);
+}
+
+.square {
+  border: 1px solid black;
+}
