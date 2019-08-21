@@ -25,6 +25,7 @@ function clearSketchPad() {
   const squares = document.querySelectorAll(".square");
   squares.forEach(square => {
     square.style.background = "white";
+    square.style.opacity = 1;
   });
 }
 
@@ -82,7 +83,7 @@ function changeBrush(brushType) {
 }
 
 appendNewSketchPad(createSketchPad(32));
-changeBrush(1);
+changeBrush(2);
 
 document.querySelector("#new-grid").addEventListener("click", () => {
   appendNewSketchPad(
@@ -90,7 +91,9 @@ document.querySelector("#new-grid").addEventListener("click", () => {
   );
   changeBrush(1);
 });
-document.querySelector("#clear").addEventListener("click", clearSketchPad);
+document.querySelector("#clear").addEventListener("click", () => {
+  clearSketchPad();
+});
 document.querySelector("#brush-black").addEventListener("click", () => {
   changeBrush(1);
 });
