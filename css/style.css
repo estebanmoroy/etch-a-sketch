@@ -1,11 +1,116 @@
 :root {
   --squares-per-side: 16;
+  --main-color: #323232;
+  --secondary-color: #fcf9ec;
+  --tertiary-color: #54ecc4;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: var(--secondary-color);
+  background-image: url(https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2015&q=80);
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Rock Salt", cursive;
+  font-size: 2.5em;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px 0px 5px;
+  background-color: var(--main-color);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+button {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+  font-size: 1.1em;
+  margin: 2px;
+  padding: 5px 10px;
+  transition: 0.5s;
+  box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.2);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  transition: 0.5s;
+  box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.4);
+  position: relative;
+  top: -1px;
+}
+
+#brush-black:hover {
+  background-color: black;
+  color: var(--secondary-color);
+}
+
+#brush-colorful:hover {
+  background-image: linear-gradient(
+    to right bottom,
+    #d16b8a,
+    #dd7882,
+    #e5887d,
+    #e9997a,
+    #eaaa7c,
+    #e6b275,
+    #debb70,
+    #d3c46e,
+    #bcc862,
+    #9ccc5d,
+    #72d061,
+    #15d36f
+  );
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+#brush-shader:hover {
+  background-image: linear-gradient(
+    to right bottom,
+    #2e2e2e,
+    #3b3b3b,
+    #484848,
+    #555555,
+    #636363,
+    #6d6d6d,
+    #777777,
+    #818181,
+    #898989,
+    #919191,
+    #999999,
+    #a1a1a1
+  );
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+i {
+  padding-right: 10px;
 }
 
 .sketch-pad-container {
   height: 720px;
   width: 720px;
-  border: 5px solid black;
+  background-color: white;
+  border: 5px solid var(--main-color);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.8);
 }
 
 .sketch-pad {
@@ -17,5 +122,22 @@
 }
 
 .square {
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  opacity: 0.75;
+}
+
+.image-credit {
+  float: right;
+  margin-right: 20px;
+}
+
+footer > p {
+  float: left;
+  margin-left: 20px;
 }
