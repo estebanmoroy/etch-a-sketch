@@ -87,7 +87,7 @@ changeBrush(2);
 
 document.querySelector("#new-grid").addEventListener("click", () => {
   appendNewSketchPad(
-    createSketchPad(prompt("How many squares per side do you want?", "64"))
+    createSketchPad(prompt("How many squares per side do you want?", "32"))
   );
   changeBrush(1);
 });
